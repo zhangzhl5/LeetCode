@@ -6,6 +6,7 @@ package com.zhangzhl.title;
  */
 public class RomanToInt {
 	public static void main(String[] args) {
+		System.out.println(romanToInt("MDIV"));;
 		
 	}
 	//	I             1
@@ -24,16 +25,15 @@ public class RomanToInt {
 		char[] arr = s.toCharArray();
 		int len = arr.length;
 		int num = 0;
-		for(int i = len-1;i > 0; i -- ) {
-			if(arr[i] == 'I'){
-				
-			} else if(arr[i] == 'I'){
+		for(int i = len-1;i >= 0; i -- ) {
+			
+			 if(arr[i] == 'I'){
 				num = num + 1;
 				continue;
 				
 			} else if(arr[i] == 'V'){
 				num = num + 5;
-				if(i-1 != 0 && arr[i-1] == 'I' ){
+				if(i-1 >= 0 && arr[i-1] == 'I' ){
 					num = num - 1 ;
 					i = i-1 ;
 				}
@@ -41,27 +41,47 @@ public class RomanToInt {
 				
 			} else if(arr[i] == 'X'){
 				num = num + 10;
+				if(i-1 >= 0 && arr[i-1] == 'I' ){
+					num = num - 1 ;
+					i = i-1 ;
+				}
 				continue;
 				
 			} else if(arr[i] == 'L'){
 				num = num + 50;
+				if(i-1 >=  0 && arr[i-1] == 'X' ){
+					num = num - 10 ;
+					i = i-1 ;
+				}
 				continue;
 				
 			} else if(arr[i] == 'C'){
 				num = num + 100;
+				if(i-1 >= 0 && arr[i-1] == 'X' ){
+					num = num - 10 ;
+					i = i-1 ;
+				}
 				continue;
 				
 			} else if(arr[i] == 'D'){
 				num = num + 500;
+				if(i-1 >= 0 && arr[i-1] == 'C' ){
+					num = num - 100;
+					i = i-1 ;
+				}
 				continue;
 				
 			} else if(arr[i] == 'M'){
 				num = num + 1000;
+				if(i-1 >= 0 && arr[i-1] == 'C' ){
+					num = num - 100;
+					i = i-1 ;
+				}
 				continue;
 			}
 		}
 		
-		return 0;
+		return num;
 	        
 	 }
 
