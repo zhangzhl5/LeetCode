@@ -6,6 +6,16 @@ package com.zhangzhl.title;
  * 左括号必须以正确的顺序闭合。 注意空字符串可被认为是有效字符串
  */
 public class IsValid {
-	
 
+	public static boolean isValid(String s) {
+		char[] arr = s.toCharArray();
+		if(arr.length == 0) {
+			return true;
+		}
+		if(arr.length % 2 != 0) {
+			return false;
+		}
+		
+		return false;
+	}
 }
