@@ -5,49 +5,60 @@ package com.zhangzhl.title;
 public class LongestCommonPrefix {
 	
 	public static void main(String[] args) {
-		String[] str = new String[]{"flower","fl","flight"};
-		System.out.println(""+longestCommonPrefix(str)+"");
+		String[] str = new String[]{"a"};
+		System.out.println(longestCommonPrefix(str));
 		
 	}
 	
+	/**
+	 * 思路：找到最短的字符串长度,然后遍历
+	 * @param strs
+	 * @return
+	 */
 	public static String longestCommonPrefix(String[] strs) {
 		int num = strs.length;
-		if(strs.length == 0 ||strs.length == 1) {
-			return null;
+		if(strs.length == 0) {
+			return "";
+		}
+		if(strs.length == 1) {
+			return strs[0];
 		}
 		
 		int minlen = strs[0].length();
 		if(minlen == 0){
-			return null;
+			return "";
 		}
-		int minstr = 0;
-		for(int i = 1; i < num;i++) {
+		int minindex = 0;
+		for(int i = 0 ; i < num;i++) {
 			if(strs[i].length() == 0){
-				return null;
+				return "";
 			}
 			if(strs[i].length() < minlen) {
 				minlen = strs[i].length();
-				minstr = i;
+				minindex = i;
 			}
 		}
 		StringBuffer str = new StringBuffer();
-		char[] stort = strs[minstr].toCharArray();
-		int w= 0;
+		char[] stort = strs[minindex].toCharArray();
+		int endindex = minlen;
 		for(int j = 0;j < minlen; j++){
 			for(int i = 0; i < num;i++) {
 				if(strs[i].toCharArray()[j] != stort[j]){
-					w = j;
+					endindex = j;
 					break;
 				}
 				
 			}
-			if(w != stort.length ){
+			if(endindex != minlen ){
 				break;
 			}
 		}
-		for(int s = 0 ; s <= w; s ++) {
+		for(int s = 0 ; s < endindex; s ++) {
 			str.append(stort[s]);
 		}
+		if(str == null){
+			return "";
+		} 
 		return str.toString();
    }
 }
