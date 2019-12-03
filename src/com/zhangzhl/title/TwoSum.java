@@ -19,7 +19,6 @@ public class TwoSum {
 	/**
 	 * 算法思路：双层循环 外层是起始位置从第一个数字开始，内层从是最后一位的开始
 	 * 先将第一个数和最后一位累加，内层循环一次递减到外层循环的位置，
-	 * 
 	 * @param nums
 	 * @param target
 	 * @return
