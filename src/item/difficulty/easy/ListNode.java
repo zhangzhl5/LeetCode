@@ -1,13 +1,8 @@
-package com.zhangzhl.title;
+package item.difficulty.easy;
 
-/**
- * 定义一个链表
- */
 public class ListNode {
 
-	// 存放数据的变量，简单点，直接为int型
 	int data;
-	// 存放结点的变量,默认为null
 	ListNode next;
 	
 	ListNode(int data) {
@@ -32,7 +27,6 @@ public class ListNode {
 		}
 	}
 
-	// 输出
 	public void print() {
 		System.out.print(this.data + "-->");
 		if (this.next != null) {

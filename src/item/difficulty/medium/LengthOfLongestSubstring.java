@@ -1,19 +1,12 @@
-package com.zhangzhl.title;
+package item.difficulty.medium;
 
 /**
- *  ¸ø¶¨Ò»¸ö×Ö·û´®£¬ÇëÄãÕÒ³öÆäÖÐ²»º¬ÓÐÖØ¸´×Ö·ûµÄ ×î³¤×Ó´® µÄ³¤¶È¡£
- *  ÊäÈë: "abcabcbb" Êä³ö: 3 
- *  ½âÊÍ: ÒòÎªÎÞÖØ¸´×Ö·ûµÄ×î³¤×Ó´®ÊÇ "abc"£¬ËùÒÔÆä³¤¶ÈÎª 3¡£
+ * ç»™å®šä¸€ä¸ªå­—ç¬¦ä¸²ï¼Œæ‰¾å‡ºå…¶ä¸­ä¸å«æœ‰é‡å¤å­—ç¬¦çš„æœ€é•¿å­ä¸²çš„é•¿åº¦ã€‚
+ * @author zhangzhl
+ *
  */
 public class LengthOfLongestSubstring {
 
-	/**
-	 * ´Ë·½·¨ºÄÊ±Ì«¾Ã£º
-	 * Ö´ÐÐÓÃÊ± : 194 ms , ÔÚËùÓÐ java Ìá½»ÖÐ»÷°ÜÁË 7.28% µÄÓÃ»§ 
-	 * ÄÚ´æÏûºÄ : 38 MB , ÔÚËùÓÐ java Ìá½»ÖÐ»÷°ÜÁË 90.13% µÄÓÃ»§
-	 * @param s
-	 * @return
-	 */
 	public int lengthOfLongestSubstring(String s) {
 		if (s == null || s.length() == 0) {
 			return 0;
@@ -38,7 +31,6 @@ public class LengthOfLongestSubstring {
 				}
 				str.append(arr[j]);
 			}
-			// Õâ¸öµãÊÇÃ»ÓÐ¿¼ÂÇµ½×îºóÒ»´Î±éÀúÊ±Êý×éÔ½½çµÄÎÊÌâ
 			if (str.length() > max) {
 				max = str.length();
 			}
