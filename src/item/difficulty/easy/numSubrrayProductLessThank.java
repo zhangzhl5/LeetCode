@@ -1,4 +1,4 @@
-package com.zhangzhl.title;
+package item.difficulty.easy;
 
 /**
  * 给定一个正整数数组 nums。
