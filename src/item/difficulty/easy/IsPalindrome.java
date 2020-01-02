@@ -1,9 +1,5 @@
 package item.difficulty.easy;
 
-/**
- * ������
- *
- */
 public class IsPalindrome {
 	public static void main(String[] args) {
 		isPalindrome(543);

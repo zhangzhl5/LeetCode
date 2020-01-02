@@ -1,7 +1,4 @@
 package item.difficulty.easy;
-
-//��дһ�������������ַ��������е������ǰ׺��
-//��������ڹ���ǰ׺�����ؿ��ַ��� ""
 public class LongestCommonPrefix {
 
 	public static void main(String[] args) {
@@ -10,12 +7,6 @@ public class LongestCommonPrefix {
 
 	}
 
-	/**
-	 * ˼·���ҵ���̵��ַ�������,Ȼ�����
-	 * 
-	 * @param strs
-	 * @return
-	 */
 	public static String longestCommonPrefix(String[] strs) {
 		int num = strs.length;
 		if (strs.length == 0) {
