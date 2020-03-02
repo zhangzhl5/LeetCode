@@ -1,11 +1,5 @@
 package item.difficulty.easy;
 
-/**
- * ����һ�� 32 λ���з�������������Ҫ�����������ÿλ�ϵ����ֽ��з�ת��
- * 
- * @author Administrator
- * 
- */
 public class Reverse {
 
 	public static void main(String[] args) {
@@ -29,9 +23,6 @@ public class Reverse {
 			flag = true;
 		}
 		int len = arr.length / 2;
-		// ��������Ҳ��������
-		// ������Ҳ��������
-		// ��������Ҳ��������
 		if (flag && isNegative) {
 			len = len + beginIndex;
 		}
@@ -57,6 +48,5 @@ public class Reverse {
 		int num = Integer.valueOf(str.toString());
 
 		return num;
-
 	}
 }
