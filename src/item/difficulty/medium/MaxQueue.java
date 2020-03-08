@@ -1,4 +1,4 @@
-package item.difficulty.easy;
+package item.difficulty.medium;
 
 import java.util.LinkedList;
 
