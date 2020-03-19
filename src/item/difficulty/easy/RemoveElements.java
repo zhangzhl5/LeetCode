@@ -31,4 +31,21 @@ public class RemoveElements {
 		return head;
 
     }
+	
+
+    /**
+     * 递归过程
+     * @param head
+     * @param val
+     * @return
+     */
+    public ListNode removeElements2(ListNode head, int val) {
+    	
+    	if(head == null) {
+    		return null;
+    	}
+    	head.next = removeElements(head.next,val);
+		return head.data == val ? head.next:head;
+
+    }
 }
