@@ -1,9 +1,8 @@
 package item.difficulty.easy;
 
-import java.util.HashMap;
 import java.util.HashSet;
-import java.util.Map;
 import java.util.Set;
+import java.util.TreeSet;
 
 /**
  * 349 题目描述：两个数组的交集
@@ -17,13 +16,13 @@ public class Intersection {
     	if(nums1.length < 1 || nums2.length < 1) {
     		return null;
     	}
-    	Map<Integer,Integer> map = new HashMap<Integer,Integer>();
+    	TreeSet arr = new TreeSet<Integer>();
     	Set<Integer> set = new HashSet<Integer>();
     	for(int i = 0 ; i < nums1.length ;i++) {
-    		map.put(nums1[i], 1);
+    		arr.add(nums1[i]);
     	}
     	for(int num : nums2) {
-    		if(map.containsKey(num)) {
+    		if(arr.contains(num)) {
     			set.add(num);
     		}
     	}
