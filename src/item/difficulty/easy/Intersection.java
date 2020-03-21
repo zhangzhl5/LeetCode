@@ -14,7 +14,7 @@ public class Intersection {
 	
     public int[] intersection(int[] nums1, int[] nums2) {
     	if(nums1.length < 1 || nums2.length < 1) {
-    		return null;
+    		return  new int[] {};
     	}
     	TreeSet arr = new TreeSet<Integer>();
     	Set<Integer> set = new HashSet<Integer>();
