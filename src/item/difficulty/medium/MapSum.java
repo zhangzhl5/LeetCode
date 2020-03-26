@@ -21,7 +21,7 @@ public class MapSum {
 		}
 
 		public Node() {
-			this.value = 0;
+			this(0);
 		}
 
 	}
