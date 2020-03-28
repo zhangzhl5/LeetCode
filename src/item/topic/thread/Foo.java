@@ -1,4 +1,4 @@
-package item.difficulty.easy;
+package item.topic.thread;
 
 public class Foo {
 
