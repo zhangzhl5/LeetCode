@@ -4,6 +4,7 @@ public class Foo {
 
 	private boolean firstFinished;
 	private boolean secondFinished;
+	// 对象锁实现线程执行顺序控制
 	Object lock = new Object();
 
 	public Foo() {
