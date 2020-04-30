@@ -7,15 +7,27 @@ package item.difficulty.easy;
  */
 public class SearchInsert {
     public int searchInsert(int[] nums, int target) {
-    	int leftindex  = 0;
-    	int index  = 0;
     	int left = 0;
     	int n = nums.length;
     	int right = n - 1;
     	while(left < right) {
-    		
+    		int mid = left + (right-left)/2;
+    		if(nums[mid] == target ) {
+    			return mid;
+    		}
+    		if(nums[mid] < target) {
+    			left = mid;
+    		} else 
+    			right = mid;
     	}
-		return target;
+		return left;
 
     }
+    
+    public static void main(String[] args) {
+    	SearchInsert searchInsert = new SearchInsert();
+    	int d = searchInsert.searchInsert(new int[]{1,3,5,6}, 2);
+    	System.out.println(d);
+    			
+	}
 }
