@@ -13,7 +13,6 @@ public class MergeTwoLists {
 		while (l1 != null && l2 != null) {
 			if (l1.data < l2.data) {
 				rspHead.next = l1;
-
 				l1 = l1.next;
 			} else {
 				rspHead.next = l2;
